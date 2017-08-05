@@ -13,99 +13,61 @@ background-image: url("../images/background.png");
 	text-align: center;
 }
 
-@import "nib"
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 400 1.4rem 'Lato', Verdana, Helvetica, sans-serif;
+}
 
 * {
-  transition: all .15s;
-  outline: none;
-  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-button {
-  font-size: 19px;
-  font-family: 'Pacifico';
-  overflow: visible;
-  border-radius: 3px;
-  position: relative;
-  padding-right: 30px;
-  background-color: #ECFBFF;
-  border: 2px solid #A6E0EE;
-  color: #2D7586;
+#wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+section button {
+  margin: 0 auto;
+  font-size: 2.0rem;
+  padding: 1.25rem 2.5rem;
   display: block;
-  margin: 13% auto;
-  height: 60px;
-  width: 200px;
-  cursor: pointer;
-  
-  &:hover {
-    background-color: #DDF7FF;
-    
-    svg {
-      transform: rotate(10deg);
-      transition: transform .15s;
-    }
-  }
-  
-  svg {
-    position: absolute;
-    top: 13px;
-    right: 25px;
-    height: 30px;
-    width: auto;
-    transition: transform .15s;
-    
-    path {
-      fill: #2D7586;
-    }
-  }
-  
-  &.clicked {
-    background-color: #cff5b3;
-    border: 2px solid #cff5b3;
-    color: #6AAA3B;
-    padding-right: 6px;
-    animation: bounce-in .3s;
-    cursor: default;
-
-    svg {
-      animation: flyaway 1.3s linear;
-      top: -80px;
-      right: -1000px;
-      
-      path {
-        fill: #6AAA3B;
-      }
-    }
-  }
+  background-color: #009ac9;
+  border: 1px solid transparent;
+  color: #ffffff;
+  font-weight: 300;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-@keyframes flyaway {
-  0%   { transform: rotate(10deg);
-         top: 13px;
-         right: 25px;
-         height: 30px; }
-  5%   { transform: rotate(10deg);
-         top: 13px;
-         right: 0px;
-         height: 30px; }
-  20%   { transform: rotate(-20deg);
-          top: 13px;
-          right: -130px;
-          height: 45px; }  
-  40%   { transform: rotate(10deg);
-          top: -40px;
-          right: -280px;
-          opacity: 1; }
-  100% { transform: rotate(60deg);
-         top: -200px;
-         right: -1000px;
-         height: 0;
-         opacity: 0; }
+section button:hover {
+  background-color: #ffffff;
+  color: #009ac9;
+  border-color: #009ac9;
 }
 
-@keyframes bounce-in {
-  0% { padding-right: 30px; }
-  40% { padding-right: 6px; }
-  50% { padding-left: 30px; }
-  100% { padding-left: 6px; }
+.firstButton {
+	position: absolute;
+	top: 250px;
+	left: 550px;
+}
+
+.secondButton {
+
+position: absolute;
+top: 250px;
+left: 800px;
 }
